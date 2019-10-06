@@ -1,0 +1,37 @@
+image: node:latest
+
+# Setup npm path for resume-cli npm package
+before_script:
+  - export PATH=$(npm bin):$PATH
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - setup
+  - test
+  - build
+
+setup_resume_cli:
+  stage: setup
+  script:
+    - npm install
+    - npm install resume-cli
+    - npm install jsonresume-theme-${RESUME_THEME}
+
+test_resume:
+  stage: test
+  script:
+    - resume test
+
+generate_resume:
+  stage: build
+  script:
+    - resume export resume.html --theme $RESUME_THEME --format html
+  only:
+    refs:
+      - master
+  artifacts:
+    paths:
+      - ./resume.html
