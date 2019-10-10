@@ -1,0 +1,13 @@
+{
+  "name": "jeremy-wright-resume",
+  "version": "0.0.1",
+  "description": "The personal resume of Jeremy Wright.",
+  "author": "Jeremy Wright <uniquelyjeremy@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
