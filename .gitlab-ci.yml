@@ -60,7 +60,5 @@ publish:image:
     - docker pull $GITLAB_IMAGE:$CI_COMMIT_SHA
     - docker tag $GITLAB_IMAGE:$CI_COMMIT_SHA $GCR_IMAGE:latest
     - docker push $GCR_IMAGE
-  after_script:
-    - rm /tmp/$CI_PIPELINE_ID.json
   
 
