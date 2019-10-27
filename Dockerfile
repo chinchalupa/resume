@@ -1,16 +1,4 @@
-# This file is a template, and might need editing before it works on your project.
-FROM node:8.11
+FROM nginx:1.17.4
 
-WORKDIR /usr/src/app
-
-ARG NODE_ENV
-ENV NODE_ENV $NODE_ENV
-
-COPY package.json /usr/src/app/
-RUN npm install
-
-COPY . /usr/src/app
-
-# replace this with your application's default port
-EXPOSE 80
-CMD [ "npm", "start" ]
+COPY default.conf /etc/nginx/conf.d/default.conf
+COPY resume.html /usr/share/nginx/html/index.html
