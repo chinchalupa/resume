@@ -43,11 +43,25 @@ build:image:
   before_script:
     - echo $CI_BUILD_TOKEN | docker login -u gitlab-ci-token registry.gitlab.com --password-stdin
   script:
+    - docker build .
+  except:
+    - master
+
+build:image:gitlab:
+  stage: build:image
+  image: docker:git
+  services:
+    - docker:dind
+  before_script:
+    - echo $CI_BUILD_TOKEN | docker login -u gitlab-ci-token registry.gitlab.com --password-stdin
+  script:
     - docker pull $GITLAB_IMAGE || true
     - docker build --cache-from $GITLAB_IMAGE -t $GITLAB_IMAGE:$CI_COMMIT_SHA .
     - docker push $GITLAB_IMAGE
+  only:
+    - master
 
-publish:image:
+publish:image:google:
   stage: publish
   image: docker:git
   services:
@@ -60,5 +74,5 @@ publish:image:
     - docker pull $GITLAB_IMAGE:$CI_COMMIT_SHA
     - docker tag $GITLAB_IMAGE:$CI_COMMIT_SHA $GCR_IMAGE:latest
     - docker push $GCR_IMAGE
-  
-
+  only:
+    - master
