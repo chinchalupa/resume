@@ -1,11 +1,11 @@
 {
   "basics": {
-        "name": "Jeremy Wright (Resume WIP)",
+        "name": "Jeremy Wright",
         "label": "Developer",
         "picture": "https://storage.cloud.google.com/jeremy_professional_photos/e6b47a_7226309.jpg?organizationId=0&walkthrough_tutorial_id=storage_quickstart",
         "email": "uniquelyjeremy+hiring@gmail.com",
-        "phone": "(317) 989-9432",
-        "summary": "My name is Jeremy Wright. I am a cloud software engineer and full stack developer. Over the years, I have familiarized myself with a variety of applications from the MEAN stack to Azure cloud development for scaling file storage solutions. Recently, I have taken an interest in quantum computing and have been investigating the nature of the computing framework and the problems it specializes in solving. When I have free time, I usually find myself playing games with friends. Recently, I have taken up photography and digital editing as a hobby.",
+        "phone": "317-989-9432",
+        "summary": "I am a computer scientist who is deeply passionate about exploring the physical bounds of computing and the complex orchestrations and applications of computing. Through my education at Rose-Hulman, I got a sweet, first taste for the potential of computers through building operating systems, designing processors, and exploring a wide range of software applications. Since then, my professional work has extended to areas such as embedded systems for tractors, database and network orchestration for public displays, and service delivery for file systems via cloud providers has provided a plethora of experience fueling my passion for the field. My recent interests have brought me into new realms of computing such as photorealistic texturing and shading, quantum simulation, and virtual reality development.",
         "location": {
             "address": "2503 North Burling St.",
             "postalCode": "60614",
@@ -17,6 +17,10 @@
             "network": "GitHub",
             "username": "chinchalupa",
             "url": "https://github.com/chinchalupa"
+        }, {
+            "network": "LinkedIn",
+            "username": "chinchalupa",
+            "url": "https://www.linkedin.com/in/chinchalupa/"
         }]
     },
     "work": [{
@@ -24,10 +28,15 @@
         "position": "Advanced Software Engineer",
         "website": "https://www.relativity.com/",
         "startDate": "2017-06-19",
-        "endDate": "2014-01-01",
-        "summary": ".",
+        "endDate": "2020-12-12",
+        "summary": "Worked on application to build metrics optical character recognition of multiple file types as well as development operations for file systems for storing vast amounts of internal and customer data in various cloud systems.",
         "highlights": [
-            "Early work on throughput and availability metrics as well as paper and language support for an OCR application."
+            "Provided granular, real-time metrics for OCR application via New Relic reporting framework and collaboration with internal reporting teams.",
+            "Served files to the Relativity platform via the SMB and SFTP protocols and blob objects hosted over standalone and integrated servers.",
+            "Rewrote integral scripts for polling customer storage metadata daily to be highly configurable via Chef and systemd service inputs.",
+            "Independently developed customer-managed encryption solution via Powershell automation in the Azure cloud framework to ensure file systems met service-level agreements for new catalogue offerings",
+            "Coordinated with operational teams to provide continuous deployment and maintenance pipelines.",
+            "Applied the ITIL framework and SCRUM best practices to achieve consistent work output, strong customer communication, and extensive, clear service delivery offerings."
         ]
     }, {
         "company": "Software Engineering Professionals",
@@ -35,10 +44,22 @@
         "website": "https://www.sep.com/",
         "startDate": "2016-06-11",
         "endDate": "2016-09-01",
-        "summary": "Worked as a contractor on John Deere tractor control systems and fleet management dashboards.",
+        "summary": "Contractor focused on John Deere tractor control systems and fleet management dashboards.",
         "highlights": [
-            "Developed for the John Deere tractor control display to create new screen renders and transitions in Qt and C++.",
+            "Development for embedded systems for tractors in Qt and C++.",
+            "Gained insight into Java-based web development as well as screen renders for embedded system displays.",
             "Strong focus in useful SCRUM processes, self-organizing teams, and flexible AGILE methods."
+        ]
+    }, {
+        "company": "Get Liquid",
+        "position": "Software Engineer Intern",
+        "startDate": "2015-06-19",
+        "endDate": "2015-08-30",
+        "website": "https://getliquid.io/ (Out of business)",
+        "summary": "Development for scientific data collaboration website as well as work within the local community to send local rain metrics from distributed computing system to NoSQL databases.",
+        "highlights": [
+            "Wrote scripts to continuously post metrics from a locally networked rain collection system to a MongoDB.",
+            "Development on website to extend, refine, and test client-facing components."
         ]
     }],
     "education": [{
@@ -49,29 +70,38 @@
         "endDate": "2017-06-22",
         "gpa": "2.6",
         "courses": [
-            "DB1101 - Basic SQL"
+            "Computer Architecture II",
+            "Programming Language Concepts",
+            "Operating Systems",
+            "Cryptography"
         ]
     }],
     "skills": [{
-        "name": "Cloud Development/Management",
-        "level": "Proficient",
+        "name": "Cloud Development",
+        "level": "Master",
         "keywords": [
-            "Cloud Development",
-            "Big Data",
-            "Azure",
-            "Infrastructure",
-            "Multi-Regional Systems"
+            "Cloud Platform Development",
+            "Service Delivery",
+            "Multi-Regional Infrastructure",
+            "Chef",
+            ".NET Framework"
         ]
     }, {
         "name": "Web Development",
-        "level": "Expert",
+        "level": "Master",
         "keywords": [
             "HTML + CSS + JavaScript",
             "UI/UX Design",
-            "Ember",
-            "Angular",
-            "Handlebars",
-            "SASS"
+            "MEAN Stack",
+            "React",
+            "Handlebars"
+        ]
+    }, {
+        "name": "Virtual Reality Development",
+        "level": "Intermediate",
+        "keywords": [
+            "Unreal Engine 4",
+            "Unity"
         ]
     }],
     "languages": [{
@@ -79,14 +109,18 @@
         "fluency": "Native speaker"
     }],
     "interests": [{
-        "name": "Home Automation",
+        "name": "Photography/Rendering",
         "keywords": [
-            "IoT",
-            "Linux"
+            "3D Modeling",
+            "Texture/Shader Engineering",
+            "Photorealism Photography",
+            "OpenGL"
         ]
-    }],
-    "references": [{
-        "name": "Jane Doe",
-        "reference": "Reference..."
+    }, {
+        "name": "Quantum Applications/Systems Engineering",
+        "keywords": [
+            "Qiskit",
+            "Q#"
+        ]
     }]
 }
