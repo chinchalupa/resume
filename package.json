@@ -1,0 +1,29 @@
+{
+    "name": "resume",
+    "description": "The package containing the scripts and dependencies necessary to build a resume json file with a given theme.",
+    "author": {
+        "name": "Jeremy Wright",
+        "email": "uniquelyjeremy+inquiry@gmail.com",
+        "url": "http://resume.jeremywright.codes/"
+    },
+    "keywords": [
+        "resume"
+    ],
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "cross-var": "1.1.0",
+        "resume-cli": "1.2.7"
+    },
+    "scripts": {
+        "prebuild": "cross-var npm i jsonresume-theme-$npm_package_config_theme",
+        "build": "cross-var resume export $npm_package_config_out_file --theme $npm_package_config_theme",
+        "postbuild": "cross-var npm uninstall jsonresume-theme-$npm_package_config_theme",
+        "test": "resume test $npm_package_config_resume_json"
+    },
+    "config": {
+        "resume_json": "resume.json",
+        "out_file": "index.html",
+        "theme": "spartan"
+    }
+}
