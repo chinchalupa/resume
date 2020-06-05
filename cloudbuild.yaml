@@ -1,0 +1,10 @@
+steps:
+  - name: node
+    entrypoint: npm
+    args: ['install']
+  - name: node
+    entrypoint: npm
+    args: ['run', 'build']
+  - name: google/cloud-sdk
+    entrypoint: gsutil
+    args: ["cp", "index.html", "gs://resume.jeremywright.codes"]
