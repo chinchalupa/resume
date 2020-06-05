@@ -9,7 +9,7 @@
     "keywords": [
         "resume"
     ],
-    "version": "1.0.0",
+    "version": "1.1.0",
     "private": true,
     "dependencies": {
         "cross-var": "1.1.0",
@@ -19,7 +19,7 @@
         "prebuild": "cross-var npm i jsonresume-theme-$npm_package_config_theme",
         "build": "cross-var resume export $npm_package_config_out_file --theme $npm_package_config_theme",
         "postbuild": "cross-var npm uninstall jsonresume-theme-$npm_package_config_theme",
-        "test": "resume test $npm_package_config_resume_json"
+        "test": "cross-var resume test $npm_package_config_resume_json"
     },
     "config": {
         "resume_json": "resume.json",
