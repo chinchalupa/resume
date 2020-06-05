@@ -1,7 +1,18 @@
-0.0.1
+1.1.0
 -------
-- Added resume.json from gist which can be found here: https://gist.github.com/chinchalupa/89a6d931ab2fd276853196705e11e3a4
+- Update package to use cross-var for testing to ensure testing cross-compatiblity between Linux and Windows platforms
+- Update README to be converted resume with manual edits removing private information
+
+1.0.0
+-------
+- Release first draft of resume which is publicly available
+- Public mirror on github made available
 
 0.1.0
 -------
 - Use nginx to host file server over http
+
+0.0.1
+-------
+- Added resume.json from gist which can be found here: https://gist.github.com/chinchalupa/89a6d931ab2fd276853196705e11e3a4
+
