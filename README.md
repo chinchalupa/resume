@@ -1,9 +1,17 @@
 # Resume
-`Resume` contains my professional resume in JSON format as well as the tools to generate new resumes via CI/CD pipelines. The repository is designed to be lightweight and portable so that others can benefit from the tools as well by forking the project.
+This is the professional resume of Jeremy Wright which is available at https://resume.jeremywright.codes. Additionally, this repository also contains the npm packaging, gitlab testing, and gcp cloud build process used to deploy the resume. The styling conversion, schema and testing is provided by [resume-cli](https://github.com/jsonresume/resume-cli).
 
-## Continuous Integration
-Every commit is validated via `resume test` which is supplied by [resume-cli](https://github.com/jsonresume/resume-cli).
+## Testing
+Testing can be performed locally and in automation via `npm test`.
 
-## Continuous Deployment
-Commits to the master branch will generate a new resume.html artifact. The resume can be controlled by passing in one of the environment variables below:
-- `RESUME_THEME` controls the theme used from the list available [here](https://jsonresume.org/themes/)
+## Deployment
+Continuous deployment is handled via gcp cloud build via npm and gsutil is used to copy html resources. Local builds can be generated via `npm run build`.
+
+## Changing Theme
+To change the theme, update the theme in the package json. Ensure a revision version bump if styling is changed.
+
+## Semantic Versioning
+Versioning for the resume is defined as such.
+- Major - Update when new information is no longer applicable to the information which was once present (e.g. new job information, new interests, etc.)
+- Minor - Update when structural or wording changes are made
+- Revision - Update when fixing typos, changing style, or updating CI
