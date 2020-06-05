@@ -1,3 +1,8 @@
+1.2.0
+-------
+- Update cloudbuild to build pdf
+- Update site to include PDF download
+
 1.1.0
 -------
 - Update package to use cross-var for testing to ensure testing cross-compatiblity between Linux and Windows platforms

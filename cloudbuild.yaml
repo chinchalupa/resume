@@ -5,6 +5,9 @@ steps:
   - name: node
     entrypoint: npm
     args: ['run', 'build']
+  - name: node
+    entrypoint: npm
+    args: ['run', 'build:pdf']
   - name: google/cloud-sdk
     entrypoint: gsutil
-    args: ["cp", "index.html", "gs://resume.jeremywright.codes"]
+    args: ["-m", "rsync", "-r", "-c", "-d", "./public", "gs://resume.jeremywright.codes"]
